@@ -10,10 +10,15 @@ How to find and analyze info from Scroll Depth: https://medium.com/google-analyt
 # Set up
 1. Copy the SphinxScrolldepth folder to you Sphinx Project.
 2. Navigate to SphinxScrollDepth and run the following commands:
+
 	>>python setup.py build
+
 	>>sudo python setup.py install
-3. Move 'layout.html' to your '_templates' directory. If there already exists a custom layout file then copy the contents of 'layout.html' to that file (be careful to copy each bit of code to the correct place in the file). Note that SphinxScrolldepth requires jQuery, make sure that jQuery is available.
-4. Add to 'layout.html' your Google Analytics tracking code to the indicated line. The Google Analytics tracking code can be found at analytics.google.com under ADMIN > Tracking Info > Tracking Code and should look similar to this:
+
+3. Copy 'jquery.scrolldepth.js' to your '_static' directory.
+4. Add 'scrolldepth.scrolldepth' to your list of extensions in 'conf.py'.
+5. Copy 'layout.html' to your '_templates' directory. If there already exists a custom layout file then copy the contents of 'layout.html' to that file (be careful to copy each bit of code to the correct place in the file). Note that SphinxScrolldepth requires jQuery, make sure that jQuery is available.
+6. Add to 'layout.html' your Google Analytics tracking code to the indicated line. The Google Analytics tracking code can be found at analytics.google.com under ADMIN > Tracking Info > Tracking Code and should look similar to this:
 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
